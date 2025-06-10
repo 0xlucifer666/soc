@@ -1,0 +1,18 @@
+[Unit]
+Description=Dante SOCKS5代理服务器
+After=network.target
+Documentation=https://www.inet.no/dante/
+
+[Service]
+Type=forking
+PIDFile=/var/run/sockd.pid
+ExecStart=/usr/local/bin/sockd-daemon.sh start
+ExecStop=/usr/local/bin/sockd-daemon.sh stop
+ExecReload=/usr/local/bin/sockd-daemon.sh restart
+TimeoutStartSec=5
+TimeoutStopSec=30
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target 
