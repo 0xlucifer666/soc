@@ -31,7 +31,7 @@
 
 ### 安装步骤
 ```bash
-git clone https://github.com/yourusername/socks-server.git
+git clone https://github.com/0xlucifer666/soc.git
 cd socks-server
 chmod +x install.sh
 ./install.sh
